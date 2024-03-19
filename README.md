@@ -50,7 +50,7 @@ class TrainAdmin(admin.ModelAdmin):
 ```
 ## OUTPUT
 
-![WhatsApp Image 2024-03-19 at 10 43 27_8d1577d7](https://github.com/MabbuAdarsh/ORM/assets/149365583/2a481870-523d-4972-b433-bf891df33d69)
+![WhatsApp Image 2024-03-19 at 11 08 38_6901a291](https://github.com/MabbuAdarsh/ORM/assets/149365583/f77cb96c-325b-4aee-8b02-592222bce2c9)
 
 
 
