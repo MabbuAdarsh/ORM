@@ -2,7 +2,11 @@
 ## Date: 12.03.2024
 
 ## AIM
-To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
+To develop a Django application to store and retrieve data from a Railway database using Object Relational Mapping(ORM).
+
+## Entity Relationship Diagram
+
+![WhatsApp Image 2024-03-19 at 10 43 37_74c3a80c](https://github.com/MabbuAdarsh/ORM/assets/149365583/de35d5a2-e487-4e6d-89f4-273c2305aa5a)
 
 ## DESIGN STEPS
 
@@ -23,27 +27,31 @@ Execute Django admin and create details for 10 books
 admin.py
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+
+from .models import Train, TrainAdmin
+
+admin.site.register(Train, TrainAdmin)
 
 models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,primary_key=True)
-    name=models.CharField(max_length=100)
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
+class Train(models.Model):
+    Train_code=models.CharField(max_length=20,primary_key=True)
+    Train_name=models.CharField(max_length=100)
+    start_time=models.DateTimeField()
+    End_time=models.DateTimeField()
+    start_station_code=models.CharField(max_length=20)
+    End_station_code=models.CharField(max_length=20)
  
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
+class TrainAdmin(admin.ModelAdmin):
+    list_display=('Train_code','Train_name','start_time','End_time','start_station_code','End_station_code')
 
 ```
 ## OUTPUT
 
-![alt text](<Screenshot 2024-03-12 223744.png>)
+![WhatsApp Image 2024-03-19 at 10 43 27_8d1577d7](https://github.com/MabbuAdarsh/ORM/assets/149365583/2a481870-523d-4972-b433-bf891df33d69)
+
 
 
 ## RESULT
